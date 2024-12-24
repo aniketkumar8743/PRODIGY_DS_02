@@ -11,7 +11,9 @@ Understand the Dataset: Explore the distribution of key features and identify mi
 Discover Survival Patterns: Analyze relationships between passenger attributes (e.g., class, gender, age) and survival rates.
 Data Transformation: Identify opportunities for feature engineering, such as creating new columns (e.g., family size).
 Provide Actionable Insights: Highlight findings that can help build predictive models or inform future research.
-Dataset
+
+## Dataset
+
 The Titanic dataset includes the following key columns:
 
 Age: Age of the passenger (contains missing values and outliers).
