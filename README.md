@@ -1,35 +1,77 @@
-# PRODIGY_DS_02
+# PRODIGY_DS_02: Titanic Dataset Exploratory Data Analysis (EDA)
+This project involves an in-depth exploratory data analysis (EDA) of the Titanic dataset to uncover key insights and patterns related to passenger demographics, ticketing, and survival rates. The analysis sheds light on how various factors like age, class, and family size influenced survival probabilities during the Titanic disaster.
 
-This repository contains an Exploratory Data Analysis (EDA) of the Titanic dataset.
+## Overview
+The Titanic dataset is a well-known dataset often used for learning data analysis and predictive modeling. This project focuses on performing EDA to extract meaningful insights about the passengers and their survival rates. It identifies patterns, highlights missing data, and explores relationships between features like age, fare, gender, and class with survival outcomes.
 
-Key Findings:
+## Project Goals
+The main objectives of this project are:
 
-- Age:
-    - 20% missing values
-    - Outliers present
-- Fare:
-    - Highly skewed data
-    - No missing values
-    - Contains group fare, not individual fare
-- Survived:
-    - 60% of passengers died, 39% survived
-    - No missing values
-- Pclass:
-    - Class 2 passengers are lower than other two classes
-    - No missing values
-- Sex:
-    - Female passengers are lower than male passengers
-    - No missing values
-- Sibsp:
-    - Single persons are higher than those with 1 or 2 siblings
-    - No missing values
-- Parch:
-    - No missing values
-    - Can be merged with Sibsp to create a new column "family_size"
-- Categorical Analysis:
-    - 1st class passengers had a higher survival rate (64%)
-    - 3rd class passengers had a lower survival rate (36%)
-    - Female passengers (74%) had a higher survival rate than males
-    - Survived chance of "Mrs" (female, Pclass 1) is higher than others
+Understand the Dataset: Explore the distribution of key features and identify missing values, outliers, and data inconsistencies.
+Discover Survival Patterns: Analyze relationships between passenger attributes (e.g., class, gender, age) and survival rates.
+Data Transformation: Identify opportunities for feature engineering, such as creating new columns (e.g., family size).
+Provide Actionable Insights: Highlight findings that can help build predictive models or inform future research.
+Dataset
+The Titanic dataset includes the following key columns:
 
-This analysis provides insights into the distribution of passenger characteristics and their relationship with survival rates.
+Age: Age of the passenger (contains missing values and outliers).
+Fare: Fare paid for the ticket (highly skewed data, includes group fares).
+Survived: Binary column indicating survival (0 = No, 1 = Yes).
+Pclass: Passenger class (1 = 1st, 2 = 2nd, 3 = 3rd).
+Sex: Gender of the passenger.
+Sibsp: Number of siblings/spouses aboard the Titanic.
+Parch: Number of parents/children aboard.
+Additional columns: Embarked, Ticket, Cabin, etc.
+The dataset does not include individual-level fare details, and some columns have significant missing values (e.g., age).
+
+## Data Analysis
+Missing Values and Outliers
+Age: Contains 20% missing values and outliers.
+Fare: No missing values but highly skewed data.
+Sibsp and Parch: No missing values and can be combined into a new column called family_size.
+Key Insights
+Survival Analysis:
+60% of passengers did not survive; 39% survived.
+1st class passengers had a significantly higher survival rate (64%) compared to 3rd class passengers (36%).
+Female passengers had a survival rate of 74%, much higher than males.
+"Mrs" passengers in 1st class had the highest survival chances.
+Passenger Demographics:
+The number of single passengers was higher compared to those with siblings/spouses.
+Female passengers were fewer than male passengers.
+Feature Relationships:
+Fare distribution is highly skewed, with a few passengers paying significantly higher fares.
+Age distribution shows missing data and a few extreme outliers.
+## Visualization
+The following visualizations are included:
+
+Histograms for numerical variables (e.g., age, fare).
+Bar charts for categorical variables (e.g., survival by class, gender).
+Box plots to visualize outliers in age and fare.
+Model Architecture
+This project does not include machine learning modeling. Instead, it focuses on data preprocessing and exploratory data analysis using Python libraries like:
+
+Pandas for data manipulation.
+Matplotlib and Seaborn for visualizations.
+Training
+This project emphasizes EDA rather than predictive modeling. However, the insights from this analysis can be used as a foundation for building classification models in the future.
+
+## Results
+Key findings from the analysis:
+
+Age:
+20% of values are missing.
+Outliers are present.
+Fare:
+Data is highly skewed, indicating a few passengers paid significantly higher fares.
+Survival Rates:
+60% of passengers did not survive, while 39% survived.
+1st class passengers had a higher survival rate compared to 2nd and 3rd classes.
+Female passengers had significantly higher survival chances than males.
+Categorical Analysis:
+"Mrs" passengers in 1st class had the highest survival rate.
+Single passengers were more prevalent than those traveling with families.
+
+## Conclusion
+This analysis provides a clear understanding of the Titanic dataset and its key features. Insights such as the relationship between passenger class, gender, and survival can inform future predictive modeling efforts. The presence of missing values and outliers highlights the need for careful preprocessing before building machine learning models.
+
+This EDA demonstrates the importance of exploratory analysis in uncovering patterns and relationships in data, forming the foundation for effective decision-making and predictive modeling.
